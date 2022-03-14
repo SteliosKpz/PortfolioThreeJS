@@ -14,7 +14,6 @@ export class AppComponent {
    disableBodyScroll = bodyScrollLock.disableBodyScroll;
    enableBodyScroll = bodyScrollLock.enableBodyScroll;
    body = document.querySelector("body");
-
    about
    portfolio
    contact
@@ -47,11 +46,7 @@ export class AppComponent {
       chapter.scrollIntoView({behavior:'smooth'})
      },200)
   }
-
-
  }
-create(){
 
-}
 }
 
