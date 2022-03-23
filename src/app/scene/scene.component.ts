@@ -22,7 +22,7 @@ export class SceneComponent implements AfterViewInit {
   rotationSpeedX: number = 0.05;
   rotationSpeedY: number = 0.002;
   textureLoader = new THREE.TextureLoader();
-  planet1Texture = this.textureLoader.load('assets/Planet.png');
+  planet1Texture = this.textureLoader.load('assets/Planet1.png');
   planet2Texture = this.textureLoader.load('assets/NormalMap.jpg');
   geometry = new THREE.IcosahedronGeometry(80, 7);
   material = new THREE.MeshPhongMaterial({

@@ -52,6 +52,9 @@ p{font-weight: 700;}
 }
 
 @media only screen and (max-width:800px){
+  .btn{
+    transform: rotateZ(90deg);
+  }
   .icon-container{
     display: flex;
     justify-content: center;
@@ -68,7 +71,7 @@ p{font-weight: 700;}
     display:flex;
     z-index: 100;
     justify-content:center;
-    transform: rotateZ(90deg);
+    transform: rotateY(90deg);
     cursor:pointer
   }
   .chapter-select-container{
