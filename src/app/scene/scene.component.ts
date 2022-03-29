@@ -22,18 +22,19 @@ export class SceneComponent implements AfterViewInit {
   rotationSpeedX: number = 0.05;
   rotationSpeedY: number = 0.002;
   textureLoader = new THREE.TextureLoader();
+
   planet1Texture = this.textureLoader.load('assets/Planet1.png');
   planet2Texture = this.textureLoader.load('assets/NormalMap.jpg');
   geometry = new THREE.IcosahedronGeometry(80, 7);
   material = new THREE.MeshPhongMaterial({
-    emissive: 0x6600ff,
-    emissiveIntensity: 0.9,
+    emissive: 0xF7CE68,
+    emissiveIntensity: 0.7,
     shininess: 0,
     normalMap: this.planet1Texture,
   });
   material2 = new THREE.MeshPhongMaterial({
-    emissive: 0x00cc99,
-    emissiveIntensity: 0.6,
+    emissive: 0xFBAB7E,
+    emissiveIntensity: 0.7,
     shininess: 50,
     normalMap: this.planet2Texture,
   });
@@ -62,10 +63,10 @@ export class SceneComponent implements AfterViewInit {
   }
 
   private createScene() {
-    var light = new THREE.HemisphereLight(0xffffff, 0x0c056d, 0.7);
+    var light = new THREE.HemisphereLight(0xffffff, 0x0c056d, 0.4);
     this.scene = new THREE.Scene();
     this.scene.background = new THREE.TextureLoader().load(
-      'assets/blurry-gradient-haikei.svg'
+      'assets/blurry-gradient-haikei (1).svg'
     );
     this.scene.add(light);
     this.shape.position.set(50, 10, 30);

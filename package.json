@@ -21,6 +21,7 @@
     "@angular/router": "~11.2.10",
     "@types/three": "^0.138.0",
     "body-scroll-lock": "^4.0.0-beta.0",
+    "ngx-mzd-timeline": "^1.0.3",
     "rxjs": "~6.6.0",
     "three": "^0.138.3",
     "tslib": "^2.0.0",

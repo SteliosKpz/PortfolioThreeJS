@@ -1,14 +1,20 @@
+<div class="toolbar"  *ngIf="currUrl!='/'">
+  <span  class="nav" style="margin-left: 20px;margin: 20px 0px 20px 20px;" routerLink="">STELIOS KARAKAPZOUDIS</span>
+  <div style="display: flex;gap: 1rem;margin: 20px 20px 20px 0px;">
+    <span  class="nav" routerLink="About">ABOUT</span>
+    <span  class="nav" routerLink="Work">WORK</span>
+    <span class="nav" routerLink="Contact">CONTACT</span>
+  </div>
+  </div>
 <div style="position: relative;" id="body">
+
   <div class="navigate-btn  slide-in-blurred-left" id="navigate" (click)="scroll(0)" *ngIf="prevChapter!null">
     <svg viewBox="0 0 448 512" class="btn" width="40" title="arrow-left">
       <path fill="#f5f5f5d8" stroke-width="1"  d="M257.5 445.1l-22.2 22.2c-9.4 9.4-24.6 9.4-33.9 0L7 273c-9.4-9.4-9.4-24.6 0-33.9L201.4 44.7c9.4-9.4 24.6-9.4 33.9 0l22.2 22.2c9.5 9.5 9.3 25-.4 34.3L136.6 216H424c13.3 0 24 10.7 24 24v32c0 13.3-10.7 24-24 24H136.6l120.5 114.8c9.8 9.3 10 24.8.4 34.3z" />
     </svg>
       </div>
-  <app-scene></app-scene>
-<div class="chapter home">
-<h1 class="header text-focus-in" >STELIOS KARAKAPZOUDIS <span class="sub-header">Web developer</span></h1>
-<div class="chapter-select-container"><h2 class="chapter-select text-focus-in-1"(click)="scroll(1)">About</h2><h2 class="chapter-select text-focus-in-2" (click)="scroll(2)">Portfolio</h2><h2 class="chapter-select text-focus-in-3" (click)="scroll(3)">Contact</h2></div>
-</div>
+  <app-scene ></app-scene>
+
 <div class="chapter" *ngIf="currChapter=='About'">
   <h1 class="header"  id="About">ABOUT</h1>
 <div style="display: flex;justify-content:start;">
@@ -32,69 +38,10 @@
 
 </div>
 </div>
-<div class="chapter" *ngIf="currChapter=='Portfolio'" >
-  <h1 class="header"  id="Portfolio" >Portfolio</h1>
-<div  class="portfolio-card-container">
-  <div class="card-portfolio">
-    <h1 style="text-align: start;">Risk analysis tool(R.A.T.)</h1>
-    <p style="text-align: center;">
-      RAT was developed with the purpose of helping the user assess risks.
-By accurately visualizing each risk's importance based on the user's input,RAT helps the user take action earlier.
-    </p>
-    <p style="text-align: left;text-decoration: underline;">Technologies used</p>
-    <ul>
-      <li>Angular</li>
-      <li>Angular material</li>
-      <li>Firestore</li>
-      <li>Firebase storage</li>
-      <li>Firebase hosting</li>
-    </ul>
-    <a href="https://risk-analysis-tool.com/#/"  style="font-size: 1.5rem; color: white;position: absolute;right: 15px;bottom: 15px;" text="" target="_blank">Visit R.A.T.</a>
-
-  </div>
-
-  <div class="card-portfolio">
-    <h1 style="text-align: start;">Timedash</h1>
-    <p style="text-align: center;">
-      Timedash is a tool that allows employers to monitor each employee's performance.Each employee can log his hours for each project he's assigned to.After each month the employer can then asses if the employee's logs are satisfactory where he can either validate or dispute the employee's timesheet.
-    </p>
-    <p style="text-align: left;text-decoration: underline;">Technologies used</p>
-    <ul>
-      <li>Angular</li>
-<li>Angular material</li>
-<li>Firestore</li>
-<li>Firebase hosting</li>
-<li>Firebase authentication</li>
-<li>MongoDB</li>
-    </ul>
-    <a href="https://timesheetapp-935fe.web.app/"  style="font-size: 1.5rem; color: white;position: absolute;right: 15px;bottom: 15px;" text="" target="_blank">Visit Timedash</a>
-  </div>
-  <div class="card-portfolio">
-    <h1 style="text-align: start;">Datalite</h1>
-      <span style="text-align: center;font-weight: 700;">
-        Datalite is a data management platform that allows users to:
-        <div style="display: flex;flex-direction: column;justify-content: center;">
-          <span>share files with their coworkers.</span>
-          <span>organize their files either by assigning them to folders or by using tags created by an admin.</span>
-          <span>manage each user with multiple options.</span>
-        </div>
-              </span>
-              <p style="text-align: left;text-decoration: underline;">Technologies used</p>
-              <div style="display: flex;flex-direction:column;flex-wrap: wrap;gap:.2rem;">
-      <li>Angular</li>
-      <li>Angular material</li>
-      <li>MongoDB</li>
-      <li>Node.js</li>
-      <li>Google cloud functions</li>
-      <li>Google cloud scheduler</li>
-      <li>Firebase storage</li>
-      <li>Firebase hosting</li>
-              </div>
-              <a href="https://timesheetapp-935fe.web.app/"  style="font-size: 1.5rem; color: white;position: absolute;right: 15px;bottom: 15px;" text="" target="_blank">Visit Datalite</a>
-
-  </div>
+<div class="chapter" >
+  <router-outlet></router-outlet>
 </div>
-</div>
+
 <div class="chapter" *ngIf="currChapter=='Contact'">
   <h1 class="header"  id="Contact" >Contact</h1>
   <div style="display: flex;flex-direction:column;gap:3rem;justify-content: center;">

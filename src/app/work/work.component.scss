@@ -1,0 +1,107 @@
+
+.chapter-select{
+  cursor: pointer;
+}
+
+.card{
+  padding: 10px;
+  display: flex;
+  border-radius: 5px;
+  flex-direction: column;
+}
+
+p{font-weight: 700;}
+
+
+
+@media only screen and (max-width:800px){
+
+  .header{
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 75px;
+  }
+  .sub-header{
+    font-size: 1rem;
+  }
+  .portfolio-card-container{
+    color: rgba(255, 255, 255, 0.801);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content:center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    padding-bottom: 10px;
+  }
+
+  .card-portfolio{
+    background-color:#b7ebff32;
+    padding: 10px;
+    padding-bottom: 50px;
+    display: flex;
+    backdrop-filter: blur(14px);
+    flex-direction: column;
+    gap: 2rem;
+    min-height: 55vh;
+    flex: 0.7 0.7 300px;
+    border-radius: 20px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  }
+}
+
+@media only screen and (min-width:801px){
+  .sub-header{
+    font-size: 2rem;
+  }
+  .header{
+    text-align: left;
+    font-size: 5rem;
+  }
+  .portfolio-card-container{
+    color: rgba(255, 255, 255, 0.801);
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+    justify-content:center;
+    align-items: center;
+    padding-bottom: 50px;
+  }
+  .card-portfolio{
+    background-color:#b7ebff32;
+    padding: 20px;
+    display: flex;
+    border-radius: 25px;
+    backdrop-filter: blur(14px);
+    flex-direction: column;
+    align-items: center;
+    gap: 10rem;
+    min-height: 85vh;
+    width: 100%;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    transition: .5s;
+    -webkit-transition:.5s;
+    transition-duration: .5s;
+  }
+  .work-img{
+    transition: .5s;
+    -webkit-transition:.5s;
+    transition-duration: .5s;
+    transition-delay: .1s;
+  }
+  .card-portfolio:hover{
+    cursor: pointer;
+    -webkit-box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.25);
+    box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.25);
+    transform: translateY(-10px);
+  }
+  .card-portfolio:hover .work-img{
+    transform: translateY(-25px);
+  }
+}
+
+
+
+
+
