@@ -16,18 +16,18 @@ import * as THREE from 'three';
 })
 export class SceneComponent implements AfterViewInit {
   constructor() {}
+  @Input() pColor=0xF7CE68
   lastScrollTop = 0;
   @ViewChild('canvas')
   private canvasRef: ElementRef;
   rotationSpeedX: number = 0.05;
   rotationSpeedY: number = 0.002;
   textureLoader = new THREE.TextureLoader();
-
   planet1Texture = this.textureLoader.load('assets/Planet1.png');
   planet2Texture = this.textureLoader.load('assets/NormalMap.jpg');
   geometry = new THREE.IcosahedronGeometry(80, 7);
   material = new THREE.MeshPhongMaterial({
-    emissive: 0xF7CE68,
+    emissive: this.pColor,
     emissiveIntensity: 0.7,
     shininess: 0,
     normalMap: this.planet1Texture,
@@ -61,7 +61,9 @@ export class SceneComponent implements AfterViewInit {
       this.renderer.render(this.scene, this.camera);
     });
   }
+changepColor(){
 
+}
   private createScene() {
     var light = new THREE.HemisphereLight(0xffffff, 0x0c056d, 0.4);
     this.scene = new THREE.Scene();

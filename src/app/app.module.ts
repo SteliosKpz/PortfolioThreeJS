@@ -12,6 +12,8 @@ import { TimedashComponent } from './timedash/timedash.component';
 import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
 import { MzdTimelineModule } from 'ngx-mzd-timeline';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+
 
 @NgModule({
   declarations: [
@@ -28,7 +30,9 @@ import { MzdTimelineModule } from 'ngx-mzd-timeline';
   imports: [
     MzdTimelineModule ,
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FontAwesomeModule,
+
   ],
   providers: [],
   bootstrap: [AppComponent]
