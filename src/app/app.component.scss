@@ -69,6 +69,16 @@ p{font-weight: 700;}
 
 
 @media only screen and (max-width:800px){
+  .nav-container{
+    display: flex;
+    gap: 1rem;
+    margin: 10px 5px 10px 0px;
+    font-size: .8rem;
+  }
+  .name{
+    margin: 10px 0px 10px 5px;
+    font-size: .8rem;
+  }
   .btn{
     transform: rotateZ(90deg);
   }
@@ -103,6 +113,15 @@ p{font-weight: 700;}
 }
 
 @media only screen and (min-width:801px){
+  .nav-container{
+    display: flex;
+    gap: 1rem;
+    margin: 20px 20px 20px 0px;
+  }
+  .name{
+    margin-left: 20px;
+    margin: 20px 0px 20px 20px;
+  }
   .icon-container{
     display: flex;
 
@@ -126,7 +145,7 @@ p{font-weight: 700;}
   .chapter{
     display:block;
     z-index: 5;
-    height: 95vh;
+    min-height: 95vh;
     padding: 0px 10vw 250px 10vw;
   }
 

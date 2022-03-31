@@ -1,6 +1,6 @@
 <div class="toolbar" [ngClass]="{'toolbar-rat':currUrl=='/Rat','toolbar-timedash':currUrl=='/Timedash'}"  *ngIf="currUrl!='/'">
-  <span  class="nav" style="margin-left: 20px;margin: 20px 0px 20px 20px;" routerLink="">STELIOS KARAKAPZOUDIS</span>
-  <div style="display: flex;gap: 1rem;margin: 20px 20px 20px 0px;">
+  <span  class="nav name" routerLink="">STELIOS KARAKAPZOUDIS</span>
+  <div  class="nav-container">
     <span  class="nav" routerLink="About">ABOUT</span>
     <span  class="nav" routerLink="Work">WORK</span>
     <span class="nav" routerLink="Contact">CONTACT</span>
@@ -9,7 +9,7 @@
 <div style="position: relative;" id="body">
   <app-scene ></app-scene>
 
-<div class="chapter" >
+<div class="chapter"  >
   <router-outlet></router-outlet>
 </div>
 
